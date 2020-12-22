@@ -1,0 +1,52 @@
+<!--Sữa -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Sửa Thông Tin </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row" *ngIf='fulledit'>
+                    <div class="col-sm-3">
+                        <img class='center-block img-responsive' src='{{fulledit.Image}}' width="150px">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="fulledit.Bookname" style="margin-bottom: 10px" />
+                        <div style="width: 100px; color: chocolate; margin-bottom: 10px">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <input type="text" [(ngModel)]="fulledit.Price" /> Đồng.
+                        <hr />
+                        <textarea class="form-control" style="font-size: 12px; margin-bottom: 10px" [(ngModel)]="fulledit.Detail" rows="7"> </textarea>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="" style="background:white; margin-bottom:20px">
+                            <h6> Thương hiệu: <input type="text" [(ngModel)]="fulledit.Author" style="margin-top: 10px" /> </h6>
+                            <hr />
+                            <h6> Công dụng chính: <input type="text" [(ngModel)]="fulledit.NamXB" style="margin-top: 10px" /> </h6>
+                            <hr />
+                            <h6> Thể Loại : {{fulledit.TheLoai}} </h6>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="save()"> Lưu </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Thoát </button>
+            </div>
+        </div>
+    </div>
+</div>

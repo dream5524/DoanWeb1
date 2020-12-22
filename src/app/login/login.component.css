@@ -1,0 +1,31 @@
+.form-group {
+    margin-left: 23em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.btn-primary {
+    margin-left: 15em;
+}
+
+img {
+    display: block;
+    margin-left: -6em;
+}
+
+.container {
+    background-image: url("../../assets/Images/banner-default-col.png");
+    height: 350px;
+    background-size: 100% auto;
+    max-width: 1490px;
+}
+
+.lienhe {
+    color: palevioletred;
+    font-size: 45px;
+    padding-left: 13em;
+    padding-top: 3em;
+}
+
+
+/* background-image: linear-gradient(-75deg, #B5EAD7, #DEF3FD, #DEB3EB); */

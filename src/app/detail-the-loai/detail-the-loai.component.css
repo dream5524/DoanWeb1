@@ -1,0 +1,135 @@
+.namesach {
+    width: 100%;
+    height: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the search field */
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+
+/* Style the submit button */
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+
+/* Clear floats */
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.price_item_shopping_deal .giamoi_deal {
+    color: #ff5501;
+    font-weight: bold;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+.price_item_shopping_deal .discount_percent3_deal {
+    background-color: #ff5501;
+    color: white;
+}
+
+.discount_percent3_deal {
+    padding: 0 5px;
+    float: right;
+    font-size: 13px;
+    /* display: inline-block; */
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.price_item_shopping_deal .giacu_deal {
+    color: #333;
+    text-decoration: line-through;
+    float: right;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.btn-outline-primary {
+    border-radius: 30px;
+    font-family: 'Arimo', sans-serif;
+    border: 1px solid #9ea3ff;
+    color: #9ea3ff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 20px 10px 20px;
+}
+
+.btn-outline-primary:hover {
+    background-image: linear-gradient(-75deg, #B5EAD7, #DEF3FD, #DEB3EB);
+    cursor: pointer;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+img.HoverCss {
+    vertical-align: middle;
+    transform: scale(1);
+    border-style: none;
+    transition: 0.2s linear all;
+}
+
+img.HoverCss:hover {
+    vertical-align: middle;
+    transform: scale(1.3);
+    border-style: none;
+    transition: 0.3s linear all;
+}
+
+.list-group-item-dark {
+    text-align: center;
+    color: black;
+    background: white;
+}
+
+
+/* .list-group-item-light {
+    background: white;
+} */
+
+.list-group-item-dark:hover {
+    color: #9ea3ff;
+    background: #fdfdfe;
+}
+
+.list-group-item-light.list-group-item-action.active,
+.list-group-item-dark.active {
+    background-image: linear-gradient(-75deg, #B5EAD7, #DEF3FD, #DEB3EB);
+    color: white;
+}
+
+.list-group-item-action:focus {
+    color: #9ea3ff;
+}

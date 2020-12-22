@@ -1,0 +1,86 @@
+<!--Cart -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Giỏ Hàng Của Bạn </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered" *ngIf="fulldetails">
+                    <tbody>
+                        <tr>
+                            <td [ngModel]="addfromcartImage(fulldetails.Image)"><img src="{{fulldetails.Image}}" class="img-thumbnail" style="height:100px;" /></td>
+                            <td [ngModel]="addfromcartnamebook(fulldetails.Bookname)">{{fulldetails.Bookname}}</td>
+                            <td [ngModel]="addfromcartAuthor(fulldetails.Author)"> {{fulldetails.Author}}</td>
+                            <td [ngModel]="addfromcartPrice(fulldetails.Price)">{{fulldetails.Price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+                <button type="button" class="btn btn-primary" (click)="addcart()" data-dismiss="modal"> Thêm Vào Giỏ Hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---->
+<div class="modal fade bd-example-modal-lg" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabes" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Giỏ Hàng Của Tôi </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col-3">Hình Ảnh</th>
+                            <th scope="col-2">Thông tin</th>
+                            <th scope="col-1">Thương hiệu</th>
+                            <th scope="col-1">Giá Tiền</th>
+                            <th scope="col-4">Số lượng</th>
+                            <th scope="col-1">Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let list of giohang">
+                            <td><img src="{{list.cartImage}}" class="img-thumbnail" style="height:100px;" /></td>
+                            <td>{{list.cartBookname}}</td>
+                            <td> {{list.cartAuthor}} </td>
+                            <td>{{list.cartPrice}}</td>
+                            <td>
+
+                                <button class="btn btn-success btn-xs plus" style="font-size:8px" (click)="add(list.cart_id)"><i class="fas fa-plus"></i></button> {{list.cartquality}}
+                                <button class="btn btn-danger btn-xs minus" style="font-size:8px" (click)="del(list.cart_id)"><i class="fas fa-minus"></i></button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" (click)="delpopup(list.cart_id)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Tổng Tiền : </td>
+                            <td colspan="6" class="text-right">{{total}} Đồng</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Mua Thêm </button>
+                <button type="button" class="btn btn-primary" routerLink="/pay" data-dismiss="modal">Thanh Toán </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.4;
+}
+
+.img {
+    background: url(https://suplo-beauty.weba.vn/web/shop/images/suplo-beauty/posts/banner-default-col.png) center no-repeat;
+    height: 350px;
+    background-size: 100% auto;
+}
+
+.lienhe {
+    color: palevioletred;
+    font-size: 45px;
+    padding-left: 12em;
+    padding-top: 3em;
+}
+
+.form {
+    margin: auto;
+}
+
+.button {
+    background-image: linear-gradient(-75deg, #B5EAD7, #DEF3FD, #DEB3EB);
+    color: white;
+    font-size: 20px;
+    border-right: 1px solid #fec9f9;
+    padding: 15px 20px !important;
+    border: solid;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-image: none;
+    background-color: lightpink;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid #ced4da;
+}
+
+.textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ced4da;
+}
+
+table.form-lien-he {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 43px;
+    margin-bottom: 3em;
+}
+
+td.td-lien-he {
+    /* padding: 22px; */
+    padding: 0 20px;
+}
+
+.pcss {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.button,
+.button:active,
+.buttonbutton:focus {
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+}

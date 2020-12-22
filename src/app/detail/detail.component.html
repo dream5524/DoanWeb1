@@ -1,0 +1,41 @@
+<div class="container" *ngIf="SP">
+    <a> {{SP.TheLoai}} > {{SP.Bookname}}  </a>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm-3">
+                <img class='center-block img-responsive' src='{{SP.Image}}' [title]='SP.Bookname' width="250px">
+            </div>
+
+            <div class="col-sm-5">
+                <h4> {{SP.Bookname}} </h4>
+                <div style="width: 100px; color: chocolate">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <h2 class="giamoi_deal"> {{SP.Price}} ₫ </h2>
+
+                <hr />
+                <a style="font-size: 17px"> {{SP.Detail}} </a>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="jumbotron" style="background:white; margin-bottom:20px">
+                    <hr />
+                    <h6> Thương hiệu: {{SP.Author}}</h6>
+                    <hr />
+                    <h6> Công dụng chính: {{SP.NamXB}} </h6>
+                    <hr />
+                    <h6> Thể Loại : {{SP.TheLoai}} </h6>
+                    <hr />
+                </div>
+                <a style="margin-left: 70px" routerLink="/TheLoai"> <button type="button" class="btn btn-warning"><< Trở Về </button> </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<app-cartshopping [list]="selectedProduct"></app-cartshopping>

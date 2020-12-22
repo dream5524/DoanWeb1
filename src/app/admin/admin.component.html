@@ -1,0 +1,195 @@
+<div class="container" style="background: light">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="book-tab" data-toggle="tab" href="#book" role="tab" aria-controls="book" aria-selected="true">Dữ Liệu Sản Phẩm </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="buy-tab" data-toggle="tab" href="#buy" role="tab" aria-controls="buy" aria-selected="false">Dữ Liệu Mua Hàng</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="book" role="tabpanel" aria-labelledby="book-tab">
+
+            <!--Menu Sách-->
+            <div class="row" style="margin-bottom: 10px; margin-top: 10px">
+                <div class="col-md-2">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-dark" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" (click)="FilterList(-1)"> <span class="badge badge-secondary">{{NumberOfContactByGroup(0)}}</span> Tất Cả </a>
+                        <a class="list-group-item list-group-item-action list-group-item-light" *ngFor='let g of ListTL' (click)="FilterList(g.IDTheLoai)" data-toggle="list"><span class="badge badge-secondary">{{NumberOfContactByGroup(g.IDTheLoai)}}</span> {{g.NameTheLoai}}  </a>
+
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="panel panel-default" *ngIf='!showform'>
+                        <button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px" (click)='themdanhmuc()'> <i class="fas fa-plus"></i>  Thêm Dữ Liệu Sách </button>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Tên Sản Phẩm</th>
+                                    <th scope="col">Thông Tin Thêm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor='let p of filtercontact| paginate: { itemsPerPage: pitem, currentPage: cpage }'>
+                                    <th scope="row">{{p.id}}</th>
+                                    <td>{{p.Bookname}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-warning btn-sm" style="margin-right: 10px" data-toggle="modal1" data-target="#exampleModaldetail" (click)="getpopup(p)">Chi Tiết </button>
+                                        <button type="button" class="btn btn-success btn-sm" style="margin-right: 10px" data-toggle="modal" data-target=".bd-example-modal-lg" (click)="edit(p)">  Sữa </button>
+                                        <button type="button" class="btn btn-danger btn-sm" style="margin-right: 10px" (click)="delete(p.id)"> Xoá </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a class="page-link" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item" *ngFor='let p of page'><a class="page-link" (click)="setPage(p)">{{p}}</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!--Thêm Sách-->
+                    <div class=" panel-default" *ngIf='showform'>
+                        <div class="row">
+                            <div class="card-body col-md-8">
+                                <div class="text-center">
+                                    <h4> Thêm Sách </h4>
+                                </div>
+                                <hr />
+
+                                <div class="form-group">
+                                    <label for="name" class="control-label"> Tên Sách </label>
+                                    <input type="text" #Bookname class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="control-label">Tác Giả </label>
+                                    <input type="text" #Author class="form-control">
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-6">
+                                        <label for="company" class="control-label"> Giá Tiền </label>
+                                        <input type="text" #Price class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="email" class="control-label">Năm Xuất Bản </label>
+                                        <input type="text" #NamXB class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-4">
+                                        <label for="name" class="control-label"> IDTheLoai </label>
+                                        <input type="text" #IDTheLoai class="form-control">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <label for="name" class="control-label">Thể loại </label>
+                                        <input type="text" #TheLoai class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name" class="control-label">Thông Tin Về Sách</label>
+                                    <textarea #Detail rows="3" class="form-control"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Hình Ảnh</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                                <hr />
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <button type="submit" class="btn btn-primary" style="margin-right:10px" (click)="add(Bookname.value, NamXB.value, IDTheLoai.value, Author.value, Detail.value, Price.value, TheLoai.value);Bookname.value=''; NamXB.value=''; IDTheLoai.value=''; Author.value=''; Detail.value=''; Price.value=''; TheLoai.value=''">Lưu</button>
+                                            <button type="submit" class="btn btn-default" (click)='huythem()'>Bỏ qua</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body col-md-4">
+                                <h5> Thể Loại Sách </h5>
+                                <hr />
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID Thể Loại</th>
+                                            <th scope="col">Thể Loại Tương Ứng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let p of ListTL">
+                                            <th scope="row">{{p.IDTheLoai}}</th>
+                                            <td>{{p.NameTheLoai}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="tab-pane fade" id="buy" role="tabpanel" aria-labelledby="buy-tab">
+
+            <!--Menu Người Mua Hàng-->
+            <table class="table table-bordered" style="margin-bottom: 10px">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tên </th>
+                        <th scope="col">Họ</th>
+                        <th scope="col">Email </th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of Pay">
+                        <th scope="row">{{p.id}}</th>
+                        <td>{{p.FirstName}}</td>
+                        <td>{{p.LastName}}</td>
+                        <td>{{p.Email}}</td>
+                        <td>
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong" (click)="orders(p)"> Xem Thêm </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<app-detailadmin [list]="selectedProductadmin"> </app-detailadmin>
+<app-editadmin [list1]="selectededit"> </app-editadmin>
+<app-orders [list2]="selectedorders"> </app-orders>

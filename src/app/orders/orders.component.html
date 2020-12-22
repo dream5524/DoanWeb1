@@ -1,0 +1,35 @@
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Chi Tiết Người Mua Hàng </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body" *ngIf='fullorders'>
+                <h6> Họ Tên: {{fullorders.FirstName}} {{fullorders.LastName}} </h6>
+                <hr />
+                <h6> Địa Chỉ: {{fullorders.Address}} </h6>
+                <hr />
+                <h6> Email: {{fullorders.Email}} </h6>
+                <hr />
+                <h6> Số Điện Thoại : {{fullorders.phone}} </h6>
+                <hr />
+                <h6> Sản phẩm Đã Mua : {{fullorders.BuyBook}} </h6>
+                <hr />
+                <h6> Số Lượng Lần Lượt : {{fullorders.Quantity}} </h6>
+                <hr />
+                <h6> Tổng Giá Tiền : {{fullorders.Price}} Đồng </h6>
+                <hr />
+                <h6> Hình Thức Thanh Toán : {{fullorders.pay}} </h6>
+                <hr />
+                <h6> Trạng Thái : <span class="badge badge-success">Đang Xử Lý</span> </h6>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+            </div>
+        </div>
+    </div>
+</div>

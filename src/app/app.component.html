@@ -1,0 +1,272 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--
+<img src="assets/img/icon.png" class="img-fluid" alt="Responsive image" width="100%"> -->
+
+<!-- Header -->
+<table id="be1" width="100%" cellpadding="1" cellspacing="1">
+    <tr height="50px">
+        <td colspan="2" id="grad">
+            <table width="100%">
+                <tr>
+                    <div class="WrappedText-Left">
+                        <td>
+                            &nbsp; &nbsp; &nbsp;
+                            <a href="#">
+                                <img class="HoverCss" src="../assets/Images/phone24.png" /> 0913.187.526 &nbsp; &nbsp; &nbsp;
+                            </a>
+                            <a href="#">
+                                <img class="HoverCss" src="../assets/Images/email24.png" /> sale@maskin.vn &nbsp; &nbsp; &nbsp;
+                            </a>
+                            <a href="#"> VI &nbsp; &nbsp; &nbsp;EN </a>
+                        </td>
+                    </div>
+                    <td align="right">
+                        <div class="WrappedText-Right">
+                            <a routerLink="/dangnhap" (click)="ofSearch()"><img class="HoverCss" src="../assets/Images/personal24.png" /> Tài khoản
+                            </a>
+                            &nbsp; &nbsp; &nbsp;
+                            <!-- <span routerLink="/dangnhap" (click)='ofSearch()'> Tài khoản</span> -->
+                            <!-- <div class="col-sm-3"> -->
+                            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-placement="bottom" style="font-size: 15px; margin-right: 30px; border: none" data-target=".bd-example-modal-lg">
+                <i class="fa fa-shopping-cart"></i>
+                <!-- <i class="fad fa-cart-plus" style="font-size:20px"></i> -->
+                <!-- <i class="fa fa-shopping-bag" style="font-size:20px"> </i> -->
+                Giỏ Hàng
+              </button>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <a href="#"><img src="../assets/Images/buying24.png" />
+
+                            <span> Giỏ hàng</span> -->
+
+                        <!-- </a> &nbsp; &nbsp; &nbsp;
+                        <a href="#"><img src="../assets/Images/money24.png" />
+                            <span> Thanh toán</span>
+                        </a> &nbsp; &nbsp; &nbsp; -->
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr style="height: auto; vertical-align: top">
+        <td width="100%">
+            <div id="menu">
+                <ul>
+                    <div class="menu left">
+                        <a href="#">
+                            <img class="acss" src="../assets/Images/IMG_1448.PNG" alt="" style="width: 209px; margin-left: 9em; margin-top: 3em" />
+                        </a>
+                    </div>
+
+                    <div class="menu center">
+                        <li style="margin-left: 2em">
+                            <a routerLink="/trangchu" (click)="onSearch()">Trang chủ</a>
+                        </li>
+                        <li>
+                            <div>
+                                <a class="dropbtn" routerLink="/TheLoai">Sản phẩm</a>
+
+                                <!-- <ul class="sub-menu">
+                                    <li>
+                                        <a class="dropbtn" *ngFor="let g of ListTL" (click)="FilterList(g.IDTheLoai)" data-toggle="list">
+                      {{ g.NameTheLoai }} <span class="badge"></span>
+                    </a>
+                                    </li> -->
+                                <!-- <li><a class="dropbtn">Dưỡng da</a></li>
+                        <li><a class="dropbtn">Chăm sóc cơ thể</a></li>
+                        <li><a class="dropbtn">Mặt nạ</a></li>
+                        <li><a class="dropbtn">Trang điểm</a></li> -->
+                                <!-- </ul> -->
+                            </div>
+                        </li>
+
+                        <li><a routerLink="/news">Tin Tức</a></li>
+                        <li><a routerLink="/lienhe">Liên hệ</a></li>
+
+                        <li>
+                            <!-- <form id="demo-2">
+                            <input type="search" placeholder="Search">
+                        </form> -->
+                        </li>
+                    </div>
+                    <!-- Search -->
+                    <div class="menu right" style="margin-top: 3em" *ngIf="of">
+                        <input *ngIf="of" onkeyup="SeggestSearch(event, this, 0)" [(ngModel)]="search" autocomplete="off" class="form-control mr-sm-2" type="search" placeholder="Bạn Cần Tìm Gì ..." aria-label="Search" style="width: 253px; height: 30px; margin-top: -2em" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="wrap-suggestion" ng-style="{(this.listSearchProduct.length> 0) ? '' : 'display: none' }">
+                                    <li *ngFor="let p of listSearchProduct">
+                                        <div class="card">
+                                            <div class="row" style="background: aliceblue">
+                                                <div class="col-sm-3">
+                                                    <img class="HoverCss" src="{{ p.Image }}" width="75" height="100" alt="Card image cap" />
+                                                </div>
+                                                <div class="col-sm-9" style="margin-top: 10px">
+                                                    <a [routerLink]="['/trangchu', p.TheLoai, p.id]" class="txtCSS">
+                            {{ p.Bookname }}
+                          </a>
+                                                    <p class="card-text">
+                                                        <span class="badge badge-warning">
+                              {{ p.Price }} Đồng.
+                            </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!-- End Header -->
+
+
+<router-outlet></router-outlet>
+
+<!-- FOOTER -->
+<div>
+    <div class="footertop">
+        <div class="wrappedfooter">
+            <table width="90%" align="center" height="100px">
+                <tr>
+                    <td align="right">
+                        <img class="HoverCss" src="../assets/Images/truck.png" />
+                    </td>
+                    <td>MIỄN PHÍ VẬN CHUYỂN <br />Nhận hàng trong vòng 3 ngày</td>
+                    <td align="right">
+                        <img class="HoverCss" src="../assets/Images/quality.png" />
+                    </td>
+                    <td>CHẤT LƯỢNG ĐẢM BẢO <br />Top 100 thương hiệu uy tín 2017</td>
+                    <td align="right">
+                        <img class="HoverCss" src="../assets/Images/24_7.png" />
+                    </td>
+                    <td>HỖ TRỢ 24/7 <br />Gọi điện Zalo-iMessage-SMS</td>
+                    <td align="right">
+                        <img class="HoverCss" src="../assets/Images/exchange.png" />
+                    </td>
+                    <td>DỂ DÀNG ĐỔI TRẢ<br />Trả lại hàng nếu không ưng ý</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrapfooter">
+            <table width="90%" align="center" style="line-height: 30px; font-size: 12px">
+                <tr>
+                    <td colspan="2">
+                        <b> CÔNG TY CỔ PHẦN MASKIN<br /> </b>
+                    </td>
+                    <td><b>DANH MỤC SẢN PHẨM</b></td>
+                    <td><b>HỖ TRỢ KHÁCH HÀNG</b></td>
+                    <td><b>ĐĂNG KÍ BẢN TIN CỦA TÔI</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="HoverCss" src="../assets/Images/map.png" />
+                    </td>
+                    <td>
+                        <b>Địa chỉ: KTX khu B, Đông Hòa, Dĩ An, Bình Dương </b>
+                    </td>
+
+                    <td rowspan="3">
+                        Làm sạch da<br /> Mặt mạ<br /> Dưỡng da<br /> Trang điểm<br /> Chăm sóc cơ thể<br />
+                    </td>
+                    <td rowspan="3">
+                        Hướng dẫn mua hàng tại Maskin<br /> Kinh nghiệm mua hàng cho bạn<br /> Đối tác và đại lý<br /> Chính sách đổi trả<br /> Phương thức thanh toán<br />
+                    </td>
+                    <td rowspan="3">
+                        <img class="HoverCss" src="../assets/Images/facebook.png" />
+                        <img class="HoverCss" src="../assets/Images/youtube.png" />
+                        <img class="HoverCss" src="../assets/Images/ins.png" />
+                        <img class="HoverCss" src="../assets/Images/twitter.png" />
+                        <img class="HoverCss" src="../assets/Images/googleplus.png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="HoverCss" src="../assets/Images/phone-call.png" />
+                    </td>
+                    <td>
+                        <b>Điện thoại: 02866860863</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="HoverCss" src="../assets/Images/email.png" />
+                    </td>
+                    <td>
+                        <b>Email: mothm18406c@st.uel.edu.vn</b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- END FOOTER -->
+
+<a href="tel:0986365524" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="left: -20px; bottom: -20px">
+    <div class="suntory-alo-ph-circle"></div>
+    <div class="suntory-alo-ph-circle-fill"></div>
+    <div class="suntory-alo-ph-img-circle"><i class="fa fa-phone"></i></div>
+</a>
+
+<!-- Menu Dưới
+<div class="container">
+    <div class="jumbotron" style="margin-bottom: 10px">
+        <h3 class="display-4" style="color: red"> Fahasa.Com </h3>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="map" style="width:10px;height:10px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15678.068182685434!2d106.63508!3d10.771655!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x798819bdcd0522b0!2sITC+HCM-City!5e0!3m2!1svi!2sus!4v1542719235502" width="290" height="215" frameborder="0"
+                        style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="row justify-content-md-center">
+                    <p class="lead" style="font-size: 50px">
+                        <a href="http://www.facebook.com" target="_blank"> <i class="fab fa-facebook-square" style="margin-right:10px"></i> </a>
+                        <a href="http://www.instagram.com/" target="_blank"> <i class="fab fa-instagram" style="margin-right:10px"></i> </a>
+                        <a href="http://www.youtube.com/" target="_blank"> <i class="fab fa-youtube-square" style="margin-right:10px"></i> </a>
+                        <a href="https://www.tumblr.com/" target="_blank"> <i class="fab fa-tumblr-square" style="margin-right:10px"></i> </a>
+                        <a href="https://twitter.com/?lang=vi" target="_blank"> <i class="fab fa-twitter-square" style="margin-right:10px"></i> </a>
+                        <a href="https://www.pinterest.com/" target="_blank"> <i class="fab fa-pinterest-square" style="margin-right:10px"></i> </a>
+                    </p>
+                    <p class="lead">
+                        <a href="http://play.google.com/store/apps/details?id=com.fahasa.android.fahasa&hl=vi" target="_blank"><img src="assets/img/Google_play.png" width="30%" style="margin-left:102px" /> </a>
+                        <a href="http://itunes.apple.com/us/app/fahasa-th%E1%BA%BF-gi%E1%BB%9Bi-trong-t%E1%BA%A7m-tay/id1227597830?mt=8" target="_blank"><img src="assets/img/App_Store.png" width="30%" /> </a>
+                    </p>
+                    <p class="lead" style="font-size: 15px; text-align: center">
+                        <b> Lầu 4, 12 Trịnh Đình Thảo </b> <br/>
+                        <b> Phường Hòa Thạnh - Quận Tân Phú  - TP HCM </b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <p class="lead">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px"> </i> <a style="margin-left:13px; font-size:15px"> Địa Chỉ: 12 Trịnh Đình Thảo, Q.Tân Phú , TP.HCM </a>
+                </p>
+                <hr />
+                <p class="lead">
+                    <i class="fas fa-phone" style="font-size: 30px"> </i> <a style="margin-left:05px; font-size:15px"> 096.787.4902 </a>
+                </p>
+                <hr />
+                <p class="lead">
+                    <i class="far fa-envelope" style="font-size: 30px"></i> <a style="margin-left:05px; font-size:15px"> Phunglienhuy1810@gmail.com </a>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div> -->

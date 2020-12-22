@@ -1,0 +1,206 @@
+.khungsanpham {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.jumbotron {
+    padding: 20px 20px 20px 20px;
+    margin-top: 10px;
+}
+
+
+/* List Product */
+
+.price_item_shopping_deal .giamoi_deal {
+    color: #ff5501;
+    font-weight: bold;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+.price_item_shopping_deal .discount_percent3_deal {
+    background-color: #ff5501;
+    color: white;
+}
+
+.discount_percent3_deal {
+    padding: 0 5px;
+    float: right;
+    font-size: 13px;
+    /* display: inline-block; */
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.price_item_shopping_deal .giacu_deal {
+    color: #333;
+    text-decoration: line-through;
+    float: right;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.btn-outline-primary {
+    border-radius: 30px;
+    font-family: 'Arimo', sans-serif;
+    border: 1px solid #9ea3ff;
+    color: #9ea3ff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 20px 10px 20px;
+}
+
+.btn-outline-primary:hover {
+    background-image: linear-gradient(-75deg, #B5EAD7, #DEF3FD, #DEB3EB);
+    cursor: pointer;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+img.HoverCss {
+    vertical-align: middle;
+    transform: scale(1);
+    border-style: none;
+    transition: 0.2s linear all;
+}
+
+img.HoverCss:hover {
+    vertical-align: middle;
+    transform: scale(1.3);
+    border-style: none;
+    transition: 0.3s linear all;
+}
+
+
+/* End List Product */
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+
+
+/* div {
+  display: block;
+} */
+
+.GioiThieu {
+    padding: 1px 8px 30px 10px;
+    font-size: 15px;
+    width: 50%;
+    color: darkslategrey;
+    margin: auto;
+    font-family: Arial;
+    font-weight: normal;
+}
+
+.ThuongHieu {
+    padding: 1px 8px 30px 5px;
+    width: 83%;
+    color: darkslategrey;
+    margin: auto;
+}
+
+.ChaoMung {
+    display: block;
+}
+
+.GioiThieuVaChaoMung {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: top;
+    -webkit-box-direction: normal;
+    vertical-align: top;
+    margin-top: 2em;
+    margin-bottom: -1em;
+}
+
+.item {
+    margin: 0px;
+    line-height: 45px;
+    position: relative;
+    border: 8px solid #dbddff;
+    border-radius: 50px;
+    background: #fff;
+    background-clip: padding-box;
+    height: 80px;
+    text-align: center;
+    float: left;
+    margin-right: 20px;
+}
+
+.item:hover {
+    background-image: linear-gradient(-75deg, #B5EAD7, #DEF3FD, #DEB3EB);
+}
+
+.owl-stage {
+    position: relative;
+}
+
+img.HoverCss {
+    vertical-align: middle;
+    transform: scale(1);
+    border-style: none;
+    transition: 0.2s linear all;
+}
+
+img.HoverCss:hover {
+    vertical-align: middle;
+    transform: scale(1.3);
+    border-style: none;
+    transition: 0.2s linear all;
+}
+
+.display-6 {
+    border-top: 3px solid #ea8fe3;
+}
+
+.display-6 .txttittle {
+    color: #ea8fe3;
+    float: left;
+    font-size: 30px;
+}
+
+.display-6-cothe {
+    border-top: 3px solid #ff6600;
+}
+
+.display-6-cothe .txttitle2 {
+    color: #ff6600;
+    float: left;
+    font-size: 30px;
+}
+
+.display-6-trangdiem {
+    border-top: 3px solid #ca64c2;
+}
+
+.display-6-trangdiem .txttitle3 {
+    color: #ca64c2;
+    float: left;
+    font-size: 30px;
+}
+
+.display-6-matna {
+    border-top: 3px solid #00b999;
+}
+
+.display-6-matna .txttitle4 {
+    color: #00b999;
+    float: left;
+    font-size: 30px;
+}

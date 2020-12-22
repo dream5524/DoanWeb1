@@ -1,0 +1,77 @@
+.col-md-3 {
+    width: 30%;
+    height: 100%;
+}
+
+.col-md-3 {
+    margin-right: -1em;
+    margin-left: 10em;
+}
+
+.col-md-3 img {
+    height: 70px;
+    width: 100px;
+}
+
+.col-md-9 {
+    width: 50%;
+    font-size: 20px;
+    height: 100%;
+    margin-top: -331px;
+    margin-left: 25em;
+}
+
+.col-md-9 img {
+    height: 212px;
+    width: 303px;
+}
+
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.col-md-9 img:hover {
+    --webkit-transform: scale(1.01);
+    /*Webkit: Tăng kích cỡ ảnh lên 1.1 lần*/
+    --moz-transform: scale(1.0.1);
+    --o-transform: scale(1.01);
+    box-shadow: 0px 0px 30px gray;
+    /*Đổ bóng bằng CSS3*/
+    -webkit-box-shadow: 0px 0px 30px gray;
+    -moz-box-shadow: 0px 0px 30px gray;
+    opacity: 1;
+    /*Độ mờ của hình ảnh*/
+}
+
+.col-md-3 img:hover {
+    --webkit-transform: scale(1.01);
+    /*Webkit: Tăng kích cỡ ảnh lên 1.1 lần*/
+    --moz-transform: scale(1.0.1);
+    --o-transform: scale(1.01);
+    box-shadow: 0px 0px 30px gray;
+    /*Đổ bóng bằng CSS3*/
+    --webkit-box-shadow: 0px 0px 30px gray;
+    --moz-box-shadow: 0px 0px 30px gray;
+    opacity: 1;
+    /*Độ mờ của hình ảnh*/
+}
+
+.linkcss:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+img {
+    margin-right: 10px;
+}
+
+a {
+    font-size: 16px;
+}

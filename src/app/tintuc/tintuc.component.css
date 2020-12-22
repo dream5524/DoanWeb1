@@ -1,0 +1,77 @@
+ div.columnleft {
+     width: 30%;
+     height: 100%;
+     float: left;
+ }
+
+ .columnleft {
+     margin-right: 4em;
+ }
+
+ .columnleft img {
+     height: 70px;
+     width: 100px;
+ }
+
+ div.columnright {
+     width: 50%;
+     font-size: 20px;
+     height: 100%;
+     float: left;
+ }
+
+ .columnright img {
+     height: 212px;
+     width: 303px;
+ }
+
+ a:link,
+ a:visited {
+     color: black;
+     text-decoration: none;
+     cursor: auto;
+ }
+
+ .columnright img:hover {
+     --webkit-transform: scale(1.01);
+     /*Webkit: Tăng kích cỡ ảnh lên 1.1 lần*/
+     --moz-transform: scale(1.0.1);
+     --o-transform: scale(1.01);
+     box-shadow: 0px 0px 30px gray;
+     /*Đổ bóng bằng CSS3*/
+     -webkit-box-shadow: 0px 0px 30px gray;
+     -moz-box-shadow: 0px 0px 30px gray;
+     opacity: 1;
+     /*Độ mờ của hình ảnh*/
+ }
+
+ .columnleft img:hover {
+     --webkit-transform: scale(1.01);
+     /*Webkit: Tăng kích cỡ ảnh lên 1.1 lần*/
+     --moz-transform: scale(1.0.1);
+     --o-transform: scale(1.01);
+     box-shadow: 0px 0px 30px gray;
+     /*Đổ bóng bằng CSS3*/
+     --webkit-box-shadow: 0px 0px 30px gray;
+     --moz-box-shadow: 0px 0px 30px gray;
+     opacity: 1;
+     /*Độ mờ của hình ảnh*/
+ }
+
+ .container {
+     margin-left: 8.5em;
+     margin-right: auto;
+ }
+
+ .linkcss:hover {
+     color: blueviolet;
+     cursor: pointer;
+ }
+
+ img:hover {
+     cursor: pointer;
+ }
+
+ img {
+     margin-right: 10px;
+ }

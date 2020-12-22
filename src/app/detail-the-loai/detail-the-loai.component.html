@@ -1,0 +1,53 @@
+<div class="container" style="background: light">
+    <!--Menu-->
+    <div class="row" style="margin-bottom: 10px; margin-top: 10px">
+        <div class="col-3">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-dark" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" (click)="FilterList(-1)" autoclick> Tất Cả sản phẩm </a>
+                <a class="list-group-item list-group-item-action list-group-item-light" *ngFor='let g of ListTL' (click)="FilterList(g.IDTheLoai)" data-toggle="list"> {{g.NameTheLoai}} <span class="badge"></span> </a>
+
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="col-3" *ngFor='let p of filtercontact | paginate: { itemsPerPage: pitem, currentPage: cpage }'>
+                    <div class="card border-dark" style="max-width: 18rem; margin-bottom:10px">
+                        <img class="HoverCss" [routerLink]="['/trangchu',p.TheLoai,p.id]" src="{{p.Image}}" width="100%" height="200px" alt="Card image cap">
+                        <div class="card-body card-header">
+                            <div class="price_item_shopping_deal">
+                                <p class="card-text"> <span class="giamoi_deal"> {{p.Price}} ₫ </span> </p>
+                                <h6 class="card-title" style="font-size: 12px">{{p.Bookname}}</h6>
+                            </div>
+                            <div class="price_item_shopping_deal">
+                                <button class="btn btn-outline-primary" data-target="#exampleModal" data-toggle="modal" (click)="getpopup(p)"> <i class="fa fa-shopping-cart"> </i>   MUA NGAY </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item" *ngFor='let p of page'><a class="page-link" (click)="setPage(p)">{{p}}</a></li>
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<app-cartshopping ng [list]="selectedProduct"></app-cartshopping>
